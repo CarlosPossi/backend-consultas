@@ -20,4 +20,9 @@ public class PacienteService {
     public List<Paciente> listar() {
         return repository.findAll();
     }
+
+    public Paciente buscarPorId(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Paciente não encontrado"));
+    }
 }

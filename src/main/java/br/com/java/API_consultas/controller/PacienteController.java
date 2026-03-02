@@ -24,4 +24,9 @@ public class PacienteController {
     public List<Paciente> listar() {
         return service.listar();
     }
+
+    @GetMapping("/{id}")
+    public Paciente buscarPorId(@PathVariable Long id) {
+        return service.buscarPorId(id);
+    }
 }
