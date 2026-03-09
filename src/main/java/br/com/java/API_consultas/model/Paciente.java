@@ -54,6 +54,6 @@ public class Paciente {
     public void setEndereco(String endereco) {this.endereco = endereco;}
     public String getCpf() {return cpf;}
     public void setCpf(String cpf) {this.cpf = cpf;}
-    public boolean isAtivo() {return ativo;}
+    public boolean getAtivo() {return ativo;}
     public void setAtivo(boolean ativo) {this.ativo = ativo;}
 }
