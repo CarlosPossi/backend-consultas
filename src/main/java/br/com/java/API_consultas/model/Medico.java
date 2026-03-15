@@ -36,7 +36,7 @@ public class Medico {
     public void setId(Long id) {this.id = id;}
     public String getNome() {return nome;}
     public void setNome(String nome) {this.nome = nome;}
-    public boolean isAtivo() {return ativo;}
+    public boolean getAtivo() {return ativo;}
     public void setAtivo(boolean ativo) {this.ativo = ativo;}
     public String getContato() {return contato;}
     public void setContato(String contato) {this.contato = contato;}
