@@ -12,8 +12,8 @@ public class Medico {
     @Column(nullable = false)
     private String nome;
     private String crm;
-    private String especialidade;
-    private String subespecialidade;
+    private Especialidade especialidade;
+    private Especialidade subespecialidade;
     private String hospital;
     private int tempoDeExperiencia;
     private String contato;
@@ -21,7 +21,7 @@ public class Medico {
 
     public Medico()     {}
 
-    public Medico (String nome, String crm, String especialidade, String subespecialidade, String hospital, int tempoDeExperiencia, String contato, boolean ativo) {
+    public Medico (String nome, String crm, Especialidade especialidade, Especialidade subespecialidade, String hospital, int tempoDeExperiencia, String contato, boolean ativo) {
         this.nome = nome;
         this.crm = crm;
         this.especialidade = especialidade;
@@ -44,10 +44,10 @@ public class Medico {
     public void setTempoDeExperiencia(int tempoDeExperiencia) {this.tempoDeExperiencia = tempoDeExperiencia;}
     public String getHospital() {return hospital;}
     public void setHospital(String hospital) {this.hospital = hospital;}
-    public String getSubespecialidade() {return subespecialidade;}
-    public void setSubespecialidade(String subespecialidade) {this.subespecialidade = subespecialidade;}
-    public String getEspecialidade() {return especialidade;}
-    public void setEspecialidade(String especialidade) {this.especialidade = especialidade;}
+    public Especialidade getSubespecialidade() {return subespecialidade;}
+    public void setSubespecialidade(Especialidade subespecialidade) {this.subespecialidade = subespecialidade;}
+    public Especialidade getEspecialidade() {return especialidade;}
+    public void setEspecialidade(Especialidade especialidade) {this.especialidade = especialidade;}
     public String getCrm() {return crm;}
     public void setCrm(String crm) {this.crm = crm;}
 }
