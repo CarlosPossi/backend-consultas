@@ -3,6 +3,7 @@ import br.com.java.API_consultas.model.Medico;
 import br.com.java.API_consultas.repository.MedicoRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 
@@ -33,4 +34,11 @@ public class MedicoService {
         Medico medico = buscarPorId(id);
         repository.delete(medico);
     }
+    public Optional<Medico> buscarPorCrm(String crm) {
+        return repository.findByCrm(crm);
+    }
+    public List<Medico> listarPorEspecialidade(Long especialidadeId) {
+        return repository.findByEspecialidadeId(especialidadeId);
+    }
+
 }
