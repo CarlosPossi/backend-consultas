@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import com.fiap.ec.backend_consultas.model.Consulta;
@@ -21,6 +22,7 @@ import com.fiap.ec.backend_consultas.repository.PacienteRepository;
  * sem duplicar dados.
  */
 @Component
+@Order(10)
 public class DataLoader implements CommandLineRunner {
 
     private final ConsultaRepository consultaRepository;
@@ -28,8 +30,8 @@ public class DataLoader implements CommandLineRunner {
     private final PacienteRepository pacienteRepository;
 
     public DataLoader(ConsultaRepository consultaRepository,
-                      MedicoRepository medicoRepository,
-                      PacienteRepository pacienteRepository) {
+            MedicoRepository medicoRepository,
+            PacienteRepository pacienteRepository) {
         this.consultaRepository = consultaRepository;
         this.medicoRepository = medicoRepository;
         this.pacienteRepository = pacienteRepository;
@@ -68,8 +70,7 @@ public class DataLoader implements CommandLineRunner {
                         null),
                 new Consulta(medico2, paciente1,
                         LocalDateTime.of(2026, 5, 18, 11, 0), "cancelada", 300.00,
-                        "Paciente desmarcou")
-        ));
+                        "Paciente desmarcou")));
 
         System.out.println("DataLoader: 4 consultas de exemplo criadas com sucesso!");
     }
