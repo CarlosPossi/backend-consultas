@@ -8,11 +8,11 @@
 		<version>4.0.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.java</groupId>
-	<artifactId>API-consultas</artifactId>
+	<groupId>com.fiap.ec</groupId>
+	<artifactId>backend-consultas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>API-consultas</name>
-	<description>Demo project for Spring Boot</description>
+	<name>backend-consultas</name>
+	<description>Api Marcação de Consultas</description>
 	<url/>
 	<licenses>
 		<license/>
